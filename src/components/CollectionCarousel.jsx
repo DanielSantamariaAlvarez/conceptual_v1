@@ -2,17 +2,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-const CollectionCarousel = () => {
+const CollectionCarousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Array de imágenes de ejemplo
-  const images = [
-    '/imagen1.jpg',
-    '/imagen2.jpg',
-    '/imagen3.jpg',
-    '/imagen4.jpg',
-    '/imagen5.jpg',
-  ];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 

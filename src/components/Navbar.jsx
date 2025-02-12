@@ -61,14 +61,18 @@ const Navbar = () => {
     <div className="fixed w-full z-50">
       {/* Título CONCEPTUAL */}
       <div className={`w-full text-center py-2 transition-all duration-300 ${
-        isScrolled ? 'bg-white' : 'bg-transparent'
+        isScrolled ? 'bg-transparent' : 'bg-white'
       }`}>
-        <h1 className="text-lg font-bold tracking-widest">CONCEPTUAL</h1>
+        <h1 className={`text-lg font-bold tracking-widest ${
+          isScrolled ? 'text-white' : 'text-black'
+        }`}>
+          CONCEPTUAL
+        </h1>
       </div>
 
       {/* Navbar */}
       <nav className={`w-full transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        isScrolled ? 'bg-transparent' : 'bg-white shadow-md'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16">
@@ -82,12 +86,12 @@ const Navbar = () => {
                   <Link
                     href={link.href}
                     className={`font-medium transition-colors duration-200 relative group ${
-                      isScrolled ? 'text-gray-700 hover:text-black' : 'text-white hover:text-gray-200'
+                      isScrolled ? 'text-white hover:text-gray-200' : 'text-gray-700 hover:text-black'
                     }`}
                   >
                     {link.label}
                     <span className={`absolute inset-x-0 bottom-0 h-0.5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 ease-out ${
-                      isScrolled ? 'bg-black' : 'bg-white'
+                      isScrolled ? 'bg-white' : 'bg-black'
                     }`} />
                   </Link>
 
@@ -116,7 +120,7 @@ const Navbar = () => {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className={`p-2 rounded-md focus:outline-none ${
-                  isScrolled ? 'text-gray-700 hover:text-black' : 'text-white hover:text-gray-200'
+                  isScrolled ? 'text-white hover:text-gray-200' : 'text-gray-700 hover:text-black'
                 }`}
               >
                 {isMenuOpen ? (
